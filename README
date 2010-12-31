@@ -6,7 +6,7 @@ telescopes. It can be used to determine the location and altitude
 of a telescope as well as the observational limits.
 
 The list of supported telescopes can be obtained from the SLALIB
-documentation: http://star-www.rl.ac.uk/star/docs/sun67.htx/sun67.html
+documentation: http://www.starlink.ac.uk/star/docs/sun67.htx/sun67.html
 (in particular the slaObs routine).
 
 Requirements
@@ -22,7 +22,7 @@ To allow for Minor Planet Center observatory code use, this module
 uses a data file containing the MPC observatory code, longitude, and
 parallax coefficients for a large number of observatories. This data
 file resides in tmpl/MPC.dat and a new version can be
-obtained from http://cfa-www.harvard.edu/iau/lists/ObsCodes.html. To use
+obtained from http://www.cfa.harvard.edu/iau/lists/ObsCodes.html. To use
 an updated version, copy the information from that page (only the data,
 not any of the headers) into tmpl/MPC.dat, then build
 this module again. This will automatically create Telescope/MPC.pm,
@@ -47,12 +47,18 @@ This module was written by Tim Jenness  <t.jenness@jach.hawaii.edu>
 of the Joint Astronomy Centre. Updates have been supplied by Brad
 Cavanagh <b.cavanagh@jach.hawaii.edu> of the Joint Astronomy Centre.
 
-Copyright (C) 1998-2004 Particle Physics and Astronomy Research Council.
+Copyright (C) 2007, 2008, 2010 Science and Technology Facilities Council.
+Copyright (C) 1998-2005 Particle Physics and Astronomy Research Council.
 All Rights Reserved. This program is free software; you can
 redistribute it and/or modify it under the same terms as Perl itself.
 
 Changes
 -------
+
+  v0.70 - Now uses Module::Build
+        - MPC functionality available without requiring Astro::SLA
+        - Default limits of the horizon for observability
+        - setlimits() method can now be used to set observability limits.
 
   v0.60 - Updates for MPC observatory codes and related information.
           Can now instantiate an object with specified coordinates.

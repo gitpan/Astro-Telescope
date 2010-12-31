@@ -1,11 +1,26 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Astro-Telescope
-version:      0.60
-version_from: Telescope.pm
-installdirs:  site
+---
+abstract: 'class for obtaining telescope information'
+author:
+  - 'Tim Jenness <tjenness@cpan.org>'
+  - 'Brad Cavanagh <bcavanagh@cpan.org>'
+build_requires:
+  Test::More: 0
+configure_requires:
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3607'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Astro-Telescope
+provides:
+  Astro::Telescope:
+    file: lib/Astro/Telescope.pm
+    version: 0.70
 requires:
-    Astro::SLA:                    0.93
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.17
+  Astro::SLA: 0.99
+resources:
+  homepage: http://github.com/timj/perl-Astro-Telescope/tree/master
+  license: http://dev.perl.org/licenses/
+  repository: git://github.com/timj/perl-Astro-Telescope.git
+version: 0.70
