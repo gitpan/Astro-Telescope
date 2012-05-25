@@ -21,7 +21,7 @@ my $build = $class->new
    version_from => $file,
    dist_author => [
                    'Tim Jenness <tjenness@cpan.org>',
-                   'Brad Cavanagh <bcavanagh@cpan.org>',
+                   'Brad Cavanagh <bradc@cpan.org>',
                   ],
    meta_merge => {
                   resources =>  {
@@ -29,8 +29,11 @@ my $build = $class->new
                                  homepage => "http://github.com/timj/perl-Astro-Telescope/tree/master",
                                 },
                  },
+   configure_requires => {
+                          "Module::Build" => 0.30,
+                         },
    requires => {
-                'Astro::SLA' => 0.99,
+                'Astro::PAL' => 0.99,
                },
    build_requires => {
                       'Test::More' => 0,
